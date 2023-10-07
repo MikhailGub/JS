@@ -21,12 +21,19 @@ let a21 = 45;
 let a22 = 32;
 
 function f2(){
-   if (a21 > a22) {
+/*    if (a21 > a22) {
       document.querySelector('.out-2').textContent = a21
    }
    else {
       document.querySelector('.out-2').textContent = a22
+   } */
+   switch ( a21 > a22 ) {
+      case true:
+         document.querySelector('.out-2').textContent = a21;
+      case false:
+         document.querySelector('.out-2').textContent = a22;
    }
+   
 }
 
 document.querySelector('.b-2').onclick = f2;
