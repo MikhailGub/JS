@@ -155,7 +155,7 @@ document.querySelector('.b-6').onclick = t6;
 function t7() {
     let out = document.querySelector('.out-7');
     let iterNum = document.querySelector('.i-7').value;
-    for (i = iterNum; i >= 0; i--) {
+    for (let i = iterNum; i >= 0; i--) {
         out.textContent += i + '_';
     }
 }
@@ -172,7 +172,12 @@ document.querySelector('.b-7').onclick = t7;
 // Задача решается с помощью цикла.
 
 function t8() {
-
+    let out = document.querySelector('.out-8');
+    let a = document.querySelector('.i-81').value;
+    let b = document.querySelector('.i-82').value;
+    for (let i = a; i <= b; i++) {
+        out.textContent += i + '_';
+    }
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -189,7 +194,17 @@ document.querySelector('.b-8').onclick = t8;
 // цикл - один
 
 function t9() {
-
+    let out = document.querySelector('.out-9');
+    let a = document.querySelector('.i-91').value;
+    let b = document.querySelector('.i-92').value;
+    if (a > b) {
+        let c = a;
+        a = b;
+        b = c;
+    }
+    for (let i = a; i <= b; i++) {
+        out.textContent += i + '_';
+    }
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -200,7 +215,12 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель - знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
-
+    let out = document.querySelector('.out-10');
+    let a = 1950;
+    let b = 1970;
+    for (let i = a; i <= b; i = i + 2) {
+            out.textContent += i + '_';
+    }
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -215,6 +235,11 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
+    let out = document.querySelector('.out-11');
+    let divs = document.querySelectorAll('.div-11');
+    for (let i = 0; i < divs.length; i++) {
+        out.textContent += divs[i].textContent + '_';
+    }
 
 }
 
@@ -228,7 +253,10 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
-
+    let elem = document.querySelectorAll('.div-12');
+    for (let i = 0; i <= elem.length; i++) {
+        elem[i].style.background = 'orange';
+    }
 }
 
 document.querySelector('.b-12').onclick = t12;
@@ -237,7 +265,10 @@ document.querySelector('.b-12').onclick = t12;
 // С помощью цикла присвойте всем input .i-13 value равное 1 для первого, 2 для второго и 3 для третьего.
 
 function t13() {
-
+    let inp = document.querySelectorAll('.i-13');
+    for (let i = 0; i <= inp.length; i++) {
+        inp[i].value = i + 1;
+    }
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -250,7 +281,13 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
-
+    let out = document.querySelector('.out-14');
+    let elem = document.querySelectorAll('.i-14');
+    for (let i = 0; i <= elem.length; i++) {
+        if (elem[i].checked) {
+            out.textContent = elem[i].value;
+        }
+    }
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -261,7 +298,10 @@ document.querySelector('.b-14').onclick = t14;
 // Подсказка (10 - i) + '_' + i + '_'
 
 function t15() {
-
+    let out = document.querySelector('.out-15');
+    for (let i = 0; i <= 10; i++) {
+        out.textContent += (10 - i) + '_' + i + '_';
+    }
 }
 
 document.querySelector('.b-15').onclick = t15;
